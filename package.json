@@ -1,0 +1,21 @@
+{
+  "name": "image-pixels-modify",
+  "version": "1.0.0",
+  "description": "modify image pixels",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/happyferry/image-pixels-modify.git"
+  },
+  "scripts": {
+    "build": "rimraf lib && tsc -p ."
+  },
+  "keywords": [],
+  "author": "happyferry",
+  "license": "MIT",
+  "devDependencies": {
+    "rimraf": "^4.4.0",
+    "typescript": "^4.9.5"
+  }
+}
