@@ -25,7 +25,7 @@ function createCanvasElement(width: number, height: number) {
   return canvas;
 }
 
-async function getImageDataAndCanvas(
+export async function getImageDataAndCanvas(
   url: string
 ): Promise<[Uint8ClampedArray, HTMLCanvasElement]> {
   const img = await getLoadedImage(url);
@@ -98,7 +98,7 @@ export function restoreData(data: number[][][]) {
 }
 
 // 反向滤镜
-function reverseFilter(pixels: Uint8ClampedArray) {
+export function reverseFilter(pixels: Uint8ClampedArray) {
   for (let i = 0; i < pixels.length; i += 4) {
     pixels[i] = 255 - pixels[i];
     pixels[i + 1] = 255 - pixels[i + 1];

@@ -9,7 +9,7 @@
     "url": "https://github.com/happyferry/image-pixels-modify.git"
   },
   "scripts": {
-    "build": "rimraf lib && tsc -p ."
+    "build": "rimraf lib && tsc -p . && cp -rf lib/* ./demo/src/lib"
   },
   "keywords": [],
   "author": "happyferry",

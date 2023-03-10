@@ -31,7 +31,7 @@ function createCanvasElement(width, height) {
     canvas.height = height;
     return canvas;
 }
-function getImageDataAndCanvas(url) {
+export function getImageDataAndCanvas(url) {
     return __awaiter(this, void 0, void 0, function* () {
         const img = yield getLoadedImage(url);
         const canvas = createCanvasElement(img.width, img.height);
@@ -94,7 +94,7 @@ export function restoreData(data) {
     return result;
 }
 // 反向滤镜
-function reverseFilter(pixels) {
+export function reverseFilter(pixels) {
     for (let i = 0; i < pixels.length; i += 4) {
         pixels[i] = 255 - pixels[i];
         pixels[i + 1] = 255 - pixels[i + 1];
@@ -145,3 +145,4 @@ export function modifyImage(url, imgDataHandler) {
         return canvas.toDataURL("image/jpeg");
     });
 }
+//# sourceMappingURL=index.js.map
